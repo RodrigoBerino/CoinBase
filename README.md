@@ -1,16 +1,64 @@
-# coinbase
+![Coinbase DS Banner](./assets/thumb_cbase.svg)
 
-A new Flutter project.
+This project is an implementation of the Coinbase Mobile App Design System built with **Flutter**, following industry best practices such as **Atomic Design**, **Design Tokens**, and **Component-Based architecture**.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+### 1. Install
 
-A few resources to get you started if this is your first Flutter project:
+This is a sample project. You can clone the repository and add the `coinbase_ds` folder to your main Flutter project as a **local package**.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+**a) Add to `pubspec.yaml` in your project:**
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```yaml
+dependencies:
+  coinbase_ds:
+    path: path/to/coinbase_ds
+```
+
+**b) run the command:**
+
+```bash
+flutter pub get
+```
+---
+
+### 2. Theme configuration and usage examples
+
+To apply the Design System globally, wrap your `MaterialApp` with the provided theme:
+
+```dart
+import 'package:coinbase_ds/coinbase_ds.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Coinbase Clone App',
+      theme: AppTheme.light, //Aplly themme
+      home: const DsShowcasePage(), // Examples
+    );
+  }
+}
+```
+
+---
+
+### 3. How to Improve 
+
+* Add more components from the original Design System
+
+* Implement Dark Mode
+
+* Improve documentation and examples
+
+---
+### Ref:
+
+[Coin Base Mobile App Clone & Design System - Figma File](https://www.figma.com/community/file/1165352571580063620)
