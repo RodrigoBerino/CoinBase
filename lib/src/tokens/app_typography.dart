@@ -12,4 +12,31 @@ abstract class AppTypography {
     fontWeight: FontWeight.w600,
     letterSpacing: -1.0,
   );
+
+  static TextStyle h2 = _baseStyle.copyWith(
+    fontSize: 32,
+    fontWeight: FontWeight.w600,
+    letterSpacing: -1.0,
+  );
+
+  static TextStyle h3 = _baseStyle.copyWith(
+    fontSize: 24,
+    fontWeight: FontWeight.w500,
+    letterSpacing: -0.5,
+  );
+
+  static TextStyle bodyLarge = _baseStyle.copyWith(
+    fontSize: 18,
+    fontWeight: FontWeight.w400,
+  );
+
+  static TextStyle bodyMedium = _baseStyle.copyWith(
+    fontSize: 16,
+    fontWeight: FontWeight.w400,
+  );
+
+  static TextStyle bodySmall = _baseStyle.copyWith(
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+  );
 }

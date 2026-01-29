@@ -21,6 +21,7 @@ dependencies:
 ```bash
 flutter pub get
 ```
+
 ---
 
 ### 2. Theme configuration and usage examples
@@ -50,15 +51,16 @@ class MyApp extends StatelessWidget {
 
 ---
 
-### 3. How to Improve 
+### 3. How to Improve
 
-* Add more components from the original Design System
+- Add more components from the original Design System
 
-* Implement Dark Mode
+- Implement Dark Mode
 
-* Improve documentation and examples
+- Improve documentation and examples
 
 ---
+
 ### Ref:
 
-[Coin Base Mobile App Clone & Design System - Figma File](https://www.figma.com/community/file/1165352571580063620)
+[Coin Base Mobile App Clone & Design System - Figma File](https://www.figma.com/design/sqcGLm1aX88GYVI8Ao1YqT/Coin-Base-Mobile-App-Clone---Design-System--Community-?node-id=102-3803&t=uLZvfvN7fez0V2GM-4)
