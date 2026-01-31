@@ -1,89 +1,56 @@
 import 'package:flutter/material.dart';
-import './src/theme/app_theme.dart';
-import './src/components/ds_button.dart';
-import './src/components/ds_text_field.dart';
+import './src/components/ds_bottom_navigation_bar.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
+/// Widget raiz da aplicação
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: AppTheme.light,
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: HomeScreen(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
+/// Tela principal que controla a navegação
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  //homepage com botoes
+class _HomeScreenState extends State<HomeScreen> {
+  int _currentIndex = 0;
+
+  /// Lista de telas simuladas
+  final List<Widget> _pages = const [
+    Center(child: Text('Home')),
+    Center(child: Text('Portfolio')),
+    Center(child: Text('Trade')),
+    Center(child: Text('Prices')),
+    Center(child: Text('Settings')),
+  ];
+
+  void _onTabSelected(int index) {
+    setState(() {
+      _currentIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      //creating body
-      body: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            DsButton(
-              //primary
-              label: 'Primary Button',
-              onPressed: () {
-                debugPrint('Primary pressed');
-              },
-            ),
-            const SizedBox(height: 16),
-
-            DsButton(
-              //secondary
-              label: 'Secondary Button',
-              variant: DsButtonVariant.secondary,
-              onPressed: () {},
-            ),
-            const SizedBox(height: 16),
-
-            DsButton(
-              //ghost button
-              label: 'Ghost Button',
-              variant: DsButtonVariant.ghost,
-              onPressed: () {},
-            ),
-            const SizedBox(height: 32),
-
-            DsButton(
-              //loading
-              label: 'Loading Button',
-              isLoading: true,
-              onPressed: () {},
-            ),
-
-            DsTextField(
-              label: 'Nome:',
-              placeholder: 'insira seu nome',
-              isPassword: true,
-            ),
-          ],
-        ),
+      body: _pages[_currentIndex],
+      bottomNavigationBar: DsBottomNavigationBar(
+        currentIndex: _currentIndex,
+        onTap: _onTabSelected,
       ),
     );
   }
