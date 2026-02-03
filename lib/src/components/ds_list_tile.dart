@@ -22,15 +22,25 @@ class DsListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      iconColor: AppColors.black60,
       contentPadding: const EdgeInsets.symmetric(
         horizontal: AppSpacing.m,
         vertical: AppSpacing.xs,
       ),
-      leading: leading,
+
+      leading: leading != null
+          ? IconTheme(
+              data: const IconThemeData(color: AppColors.primary100),
+              child: leading!,
+            )
+          : null,
 
       title: Text(
         title,
-        style: AppTypography.bodyMedium.copyWith(fontWeight: FontWeight.w600),
+        style: AppTypography.bodyMedium.copyWith(
+          fontWeight: FontWeight.w600,
+          color: AppColors.black80,
+        ),
       ),
 
       subtitle: subtitle != null
@@ -42,7 +52,9 @@ class DsListTile extends StatelessWidget {
 
       trailing: trailing,
       onTap: onTap,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(AppSpacing.sm),
+      ),
     );
   }
 }
