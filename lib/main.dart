@@ -1,3 +1,4 @@
+import 'package:coinbase/src/pages/home/home_page.dart';
 import 'package:flutter/material.dart';
 import 'src/routes/app_routes.dart';
 import './src/pages/splash/splash_page.dart';
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         AppRoutes.splash: (_) => const SplashPage(),
         AppRoutes.onboarding: (_) => const Onboarding(),
         AppRoutes.login: (_) => const LoginPage(),
+        AppRoutes.home: (_) => const HomePage(),
       },
     );
   }
