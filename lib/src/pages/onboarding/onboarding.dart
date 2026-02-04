@@ -30,9 +30,10 @@ class Onboarding extends StatelessWidget {
                   Text(
                     'Coinbase',
                     style: AppTypography.h1.copyWith(
+                      fontWeight: FontWeight.w900,
                       color: Colors.white,
                       fontSize: 32,
-                      letterSpacing: -1,
+                      letterSpacing: 0,
                     ),
                   ),
                 ],

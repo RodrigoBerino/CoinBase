@@ -9,8 +9,8 @@ abstract class AppTypography {
   //Heading
   static TextStyle h1 = _baseStyle.copyWith(
     fontSize: 40,
-    fontWeight: FontWeight.w800,
-    letterSpacing: -1.0,
+    fontWeight: FontWeight.w900,
+    letterSpacing: 0,
   );
 
   static TextStyle h2 = _baseStyle.copyWith(

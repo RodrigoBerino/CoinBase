@@ -56,9 +56,10 @@ class _SplashView extends StatelessWidget {
             Text(
               'CoinBase',
               style: AppTypography.h1.copyWith(
+                fontWeight: FontWeight.w900,
                 color: Colors.white,
                 fontSize: 48,
-                letterSpacing: -2,
+                letterSpacing: 0,
               ),
             ),
           ],

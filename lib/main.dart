@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'src/routes/app_routes.dart';
 import './src/pages/splash/splash_page.dart';
 import 'src/pages/onboarding/onboarding.dart';
+import 'src/pages/login/login_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       routes: {
         AppRoutes.splash: (_) => const SplashPage(),
         AppRoutes.onboarding: (_) => const Onboarding(),
-        /*         AppRoutes.login: (_) => const _LoginPage(), */
+        AppRoutes.login: (_) => const LoginPage(),
       },
     );
   }
