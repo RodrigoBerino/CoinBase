@@ -1,7 +1,8 @@
-import 'package:coinbase/src/routes/app_routes.dart';
 import 'package:coinbase/src/tokens/app_colors.dart';
 import 'package:coinbase/src/tokens/app_typography.dart';
 import 'package:flutter/material.dart';
+
+import 'splash_controller.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -10,19 +11,33 @@ class SplashPage extends StatefulWidget {
   State<SplashPage> createState() => _SplashPageState();
 }
 
-class _SplashPageState extends State<SplashPage> {
+class _SplashPageState extends State<SplashPage> implements SplashNavigator {
+  late final SplashController _controller;
+
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds: 2), () {
-      if (mounted) {
-        Navigator.pushReplacementNamed(context, AppRoutes.onboarding);
-      }
-    });
+    _controller = SplashController(this); //injeta o navigator
+    _controller.start(); //inicia a splash
   }
 
   @override
-  Widget build(BuildContext) {
+  void goTo(String route) {
+    if (!mounted) return; //verifica se o widget existe
+    Navigator.pushReplacementNamed(context, route);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return const _SplashView();
+  }
+}
+
+class _SplashView extends StatelessWidget {
+  const _SplashView();
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.primary100,
       body: Center(

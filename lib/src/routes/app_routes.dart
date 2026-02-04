@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../pages/splash_page.dart';
+import '../pages/splash/splash_page.dart';
 //import '../pages/onboarding_page.dart';
-import '../pages/login_page.dart';
+
 //import '../pages/home_page.dart';
 
 abstract class AppRoutes {
