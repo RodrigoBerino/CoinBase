@@ -1,6 +1,7 @@
 import 'package:coinbase/src/tokens/app_colors.dart';
 import 'package:coinbase/src/tokens/app_typography.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import 'splash_controller.dart';
 
@@ -41,13 +42,26 @@ class _SplashView extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.primary100,
       body: Center(
-        child: Text(
-          'CoinBase',
-          style: AppTypography.h1.copyWith(
-            color: Colors.white,
-            fontSize: 48,
-            letterSpacing: -2,
-          ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+
+          children: [
+            SvgPicture.asset(
+              'assets/illustration/icon_bitcoin.svg',
+              width: 72,
+              height: 72,
+            ),
+
+            const SizedBox(height: 16),
+            Text(
+              'CoinBase',
+              style: AppTypography.h1.copyWith(
+                color: Colors.white,
+                fontSize: 48,
+                letterSpacing: -2,
+              ),
+            ),
+          ],
         ),
       ),
     );

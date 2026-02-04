@@ -5,7 +5,12 @@ import 'package:coinbase/src/tokens/app_typography.dart';
 import 'package:flutter/material.dart';
 import '../tokens/app_spacing.dart';
 
-enum DsButtonVariant { primary, secondary, ghost } //variações semanticas
+enum DsButtonVariant {
+  primary,
+  secondary,
+  ghost,
+  ghostWhite,
+} //variações semanticas
 
 //stateless para o button n guardar estados e manter o conteudo reutilizavel
 class DsButton extends StatelessWidget {
@@ -94,12 +99,23 @@ class DsButton extends StatelessWidget {
           ),
           elevation: 0,
         );
+      case DsButtonVariant.ghostWhite:
+        return ElevatedButton.styleFrom(
+          backgroundColor: Colors.transparent,
+          foregroundColor: AppColors.primary100,
+          disabledBackgroundColor: AppColors.primary40,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(AppSpacing.sm),
+          ),
+          elevation: 0,
+        );
     }
   }
 
   Color _getTextColor() {
     if (variant == DsButtonVariant.primary) return Colors.white;
     if (variant == DsButtonVariant.ghost) return AppColors.primary100;
-    return AppColors.black100;
+    if (variant == DsButtonVariant.ghostWhite) return AppColors.black0;
+    return AppColors.primary100;
   }
 }
