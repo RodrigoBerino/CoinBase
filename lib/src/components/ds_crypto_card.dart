@@ -66,7 +66,7 @@ class DsCryptoCard extends StatelessWidget {
               Text(
                 valueInCurrency,
                 style: AppTypography.bodyMedium.copyWith(
-                  fontWeight: FontWeight.w600,
+                  fontWeight: FontWeight.w400,
                 ),
               ),
 

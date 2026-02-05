@@ -59,6 +59,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/illustration/icon_bitcoin.svg
+    - assets/illustration/v_email.svg
 
   # To add assets to your application, add an assets section, like this:
   # assets:

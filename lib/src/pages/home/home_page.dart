@@ -1,7 +1,7 @@
 import 'package:coinbase/src/components/ds_bottom_navigation_bar.dart';
 import 'package:coinbase/src/tokens/app_colors.dart';
-import 'package:coinbase/src/tokens/app_spacing.dart';
 import 'package:flutter/material.dart';
+import '../home/home_view.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
 
   final List<Widget> _pages = const [
     HomeView(),
-    /* HomeView(),
+    /*
     PortfolioView(),
     TradeView(),
     PricesView(),
@@ -29,32 +29,16 @@ class _HomePageState extends State<HomePage> {
   }
 
   @override
-  Widget build(BuildContext) {
+  Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.black0,
       body: _pages[_currentIndex],
       bottomNavigationBar: DsBottomNavigationBar(
         currentIndex: _currentIndex,
-        onTap: _onBottomBarTap,
+        onTap: (index) {
+          setState(() => _currentIndex = index);
+        },
       ),
     );
-  }
-
-  Widget HomeView() {
-    return SafeArea(
-      child: SingleChildScrollView(
-        padding: AppSpacing.paddingAllL,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            WelcomeCard(),
-            const SizedBox(height: AppSpacing.l),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget WelcomeCard() {
-    return Container(decoration: BoxDecoration(color: AppColors.black0));
   }
 }
