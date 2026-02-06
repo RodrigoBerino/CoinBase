@@ -1,4 +1,5 @@
 import 'package:coinbase/src/components/ds_crypto_card.dart';
+import 'package:coinbase/src/routes/app_routes.dart';
 import 'package:coinbase/src/tokens/app_colors.dart';
 import 'package:coinbase/src/tokens/app_spacing.dart';
 import 'package:coinbase/src/tokens/app_typography.dart';
@@ -20,19 +21,20 @@ class WatchlistCard extends StatelessWidget {
           ),
         ),
         const SizedBox(height: AppSpacing.m),
+
         Column(
           spacing: AppSpacing.m,
           children: [
-            DsCryptoCard(
-              titleCard: 'Bitcoin',
-              symbolCard: 'BTC',
-              iconCard: const Icon(
-                Icons.currency_bitcoin,
-                color: Colors.orange,
+            GestureDetector(
+              onTap: () => Navigator.pushNamed(context, AppRoutes.cryptoBuy),
+              child: const DsCryptoCard(
+                titleCard: 'Bitcoin',
+                symbolCard: 'BTC',
+                iconCard: Icon(Icons.currency_bitcoin, color: Colors.orange),
+                balance: '\$38,650.31',
+                valueInCurrency: '\$38,650.31',
+                percentageChange: 3,
               ),
-              balance: '\$38,650.31',
-              valueInCurrency: '\$38,650.31',
-              percentageChange: 3,
             ),
             DsCryptoCard(
               titleCard: 'Exchange',

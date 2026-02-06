@@ -16,13 +16,13 @@ abstract class AppTypography {
   static TextStyle h2 = _baseStyle.copyWith(
     fontSize: 32,
     fontWeight: FontWeight.w600,
-    letterSpacing: -1.0,
+    letterSpacing: 0,
   );
 
   static TextStyle h3 = _baseStyle.copyWith(
     fontSize: 24,
-    fontWeight: FontWeight.w500,
-    letterSpacing: -0.5,
+    fontWeight: FontWeight.w900,
+    letterSpacing: 0,
   );
 
   static TextStyle bodyLarge = _baseStyle.copyWith(

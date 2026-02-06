@@ -60,6 +60,7 @@ flutter:
   assets:
     - assets/illustration/icon_bitcoin.svg
     - assets/illustration/v_email.svg
+    - assets/illustration/buy.svg
 
   # To add assets to your application, add an assets section, like this:
   # assets:

@@ -6,7 +6,8 @@ abstract class AppColors {
   static const Color primary80 = Color(0XFF5275EC);
   static const Color primary60 = Color(0XFF7D97F1);
   static const Color primary40 = Color(0XFFD0DBFF);
-  static const Color primary20 = Color(0XFFF5F8FE);
+  static const Color primary20 = Color.fromARGB(255, 241, 246, 255);
+  static const Color primary10 = Color.fromARGB(255, 250, 252, 255);
 
   //secondary
   static const Color secondary100 = Color(0XFFFFBE55);

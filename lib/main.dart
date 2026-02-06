@@ -1,3 +1,4 @@
+import 'package:coinbase/src/pages/buy/buy_page.dart';
 import 'package:coinbase/src/pages/home/home_page.dart';
 import 'package:flutter/material.dart';
 import 'src/routes/app_routes.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         AppRoutes.onboarding: (_) => const Onboarding(),
         AppRoutes.login: (_) => const LoginPage(),
         AppRoutes.home: (_) => const HomePage(),
+        AppRoutes.cryptoBuy: (_) => const BuyPage(),
       },
     );
   }
