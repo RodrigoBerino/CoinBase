@@ -60,6 +60,7 @@ This project solves that by bridging a **Figma Design System** directly to a **F
 <p align="center">
   <img src="./assets/Cbase.svg" width="75%"/>
 </p>
+
 ---
 
 ### 4. How to Improve this project
