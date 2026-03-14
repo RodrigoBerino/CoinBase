@@ -1,13 +1,11 @@
 import 'package:coinbase/src/components/ds_button.dart';
 import 'package:coinbase/src/components/ds_controls.dart';
-import 'package:coinbase/src/routes/app_routes.dart';
 import 'package:coinbase/src/tokens/app_colors.dart';
 import 'package:coinbase/src/tokens/app_spacing.dart';
 import 'package:coinbase/src/tokens/app_typography.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class BuyPage extends StatefulWidget {
   final String cryptoName;

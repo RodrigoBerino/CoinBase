@@ -1,5 +1,4 @@
 import 'package:coinbase/src/pages/home/widgets/watchlist_card.dart';
-import 'package:coinbase/src/tokens/app_colors.dart';
 import 'package:coinbase/src/tokens/app_spacing.dart';
 import 'package:flutter/material.dart';
 import '../home/widgets/welcome_card.dart';

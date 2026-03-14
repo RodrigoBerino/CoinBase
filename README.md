@@ -1,4 +1,4 @@
-![Coinbase DS Banner](./assets/thumb_cbase.svg)
+![Coinbase DS Banner](./assets/TcBase.svg)
 
 This project is an implementation of the Coinbase Mobile App Design System built with **Flutter**, following industry best practices such as **Atomic Design**, **Design Tokens**, and **Component-Based architecture**.
 
@@ -51,7 +51,18 @@ class MyApp extends StatelessWidget {
 
 ---
 
-### 3. How to Improve
+### 3. The problem
+
+Building mobile interfaces without a shared visual contract between design and development leads to inconsistency, rework, and slow iteration.
+
+This project solves that by bridging a **Figma Design System** directly to a **Flutter implementation**. Every visual decision — from the `primary100` blue to the `AppSpacing.m` padding — originates in Figma and is mapped 1:1 into code as design tokens. Components like `DsButton`, `DsCryptoCard`, and `DsBottomNavigationBar` are built once following Atomic Design principles and reused across all screens, ensuring the UI always reflects the source of truth defined by the designer.
+
+<p align="center">
+  <img src="./assets/Cbase.svg" width="75%"/>
+</p>
+---
+
+### 4. How to Improve this project
 
 - Add more components from the original Design System
 
